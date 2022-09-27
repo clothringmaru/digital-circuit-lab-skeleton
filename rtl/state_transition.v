@@ -181,6 +181,15 @@ module state_transition (
 							alu_in_sel = 1'b0;
 							alu_func = `ALU_AND;
 						end
+						`MOVI: begin
+							en_fetch = 1'b0;
+							en_group = 1'b1;
+							en_pc = 1'b0;
+							pc_ctrl = 2'b00;
+							reg_en = 4'b0000;
+							alu_in_sel = 1'b0;
+							alu_func = `ALU_MOVI;
+						end
 						default: begin
 							en_fetch = 1'b0;
 							en_group = 1'b1;

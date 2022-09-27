@@ -24,6 +24,7 @@ module alu #(
 				`ALU_SUB:  alu_out <= alu_a - alu_b;
 				`ALU_AND: alu_out <= alu_a & alu_b;
 				`ALU_OR: alu_out <= alu_a | alu_b;
+				`ALU_MOVI: alu_out <= 0 + alu_b;
 				//`ALU_XOR: alu_out <= alu_a ^ alu_b;
 				default:   alu_out <= defaultval;
 			endcase

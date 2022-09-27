@@ -135,6 +135,7 @@ module tb_cpu();
 		//`IROM(START_ADDR + 3) = {`OR,	`X3, `X1,  8'd0};
 		`IROM(START_ADDR + 0) = {`ADDI,  `X1, `X0,  8'd1};
 		`IROM(START_ADDR + 1) = {`ANDI,  `X0, `X0,  8'd1};
+		`IROM(START_ADDR + 2) = {`MOVI,  `X0, `X0,  8'd2};
 		// check result
 		//check_result_rf(`X1, `DWIDTH'd3, "ADD" );
 		//check_result_rf(`X1, `DWIDTH'd2, "SUB");
@@ -142,6 +143,7 @@ module tb_cpu();
 		//check_result_rf(`X3, `DWIDTH'd6, "OR");
 		check_result_rf(`X1, `DWIDTH'd2, "ADDI" );
 		check_result_rf(`X0, `DWIDTH'd0, "ANDI" );
+		check_result_rf(`X0, `DWIDTH'd2, "MOVI" );
 		all_tests_passed = 1'b1;
 
 		#100;
