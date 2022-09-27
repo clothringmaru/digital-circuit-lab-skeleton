@@ -17,7 +17,7 @@ module pc #(
 				case (pc_ctrl)
 					2'b01: pc_out <= pc_out + 1;
                     default: pc_out <= pc_out;
-                endcase
+                endcase//
             end
         end   
 	end
